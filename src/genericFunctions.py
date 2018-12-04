@@ -16,3 +16,9 @@ def loadTCGADataset() :
 	y = data[:,0].ravel() # to have it in the format that the classifiers like
 
 	return X, y, biomarkers 
+
+def loadFeatures(filename) :
+	
+	df = read_csv(filename)
+	
+	return df["feature"].as_matrix().ravel()[:100]
