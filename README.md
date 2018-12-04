@@ -5,3 +5,5 @@ Code and datasets for the (Lopez et. al, 2018) paper, currently under review.
 /data - datasets used in the experiments
 
 /src - Python code used in the experiments
+
+## Citing the repository (TODO)
