@@ -52,21 +52,8 @@ from sklearn.model_selection import StratifiedKFold
 # this is an incredibly useful function
 from pandas import read_csv
 
-def loadDataset() :
-	
-	# data used for the predictions
-	print("Reading data...")
-	df = read_csv("../data/tcga_dataset.csv")
-	
-	# names of the biomarkers
-	biomarkers = list(df)
-	biomarkers.remove("class")
-	
-	data = df.as_matrix()
-	X = data[:,1:]
-	y = data[:,0].ravel() # to have it in the format that the classifiers like
-
-	return X, y, biomarkers 
+# local functions
+import genericFunctions
 
 # this function returns a list of features, in relative order of importance
 def relativeFeatureImportance(classifier) :
@@ -207,7 +194,7 @@ def main() :
 	#		]
 
 	print("Loading dataset...")
-	X, y, biomarkerNames = loadDataset()
+	X, y, biomarkerNames = genericFunctions.loadTCGADataset()
 	
 	# create folder
 	folderName = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M") + "-" + str(len(classifierList)) + "-feature-selection-efs"
