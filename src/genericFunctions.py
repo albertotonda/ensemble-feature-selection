@@ -5,7 +5,7 @@ def loadTCGADataset() :
 	
 	# data used for the predictions
 	print("Reading data...")
-	df = read_csv("../data/tcga_dataset.csv")
+	df = read_csv("../data/tcga_dataset_raw_reads_per_million.csv")
 	
 	# names of the biomarkers
 	biomarkers = list(df)
