@@ -92,15 +92,15 @@ def main() :
 	# FINALLY, WE CAN CLASSIFY AWAY!
 	classifierList = [
 
-			[RandomForestClassifier(), "RandomForestClassifier()"],
-			#[BaggingClassifier(n_estimators=300), "BaggingClassifier(n_estimators=300)"],
-			#[GradientBoostingClassifier(n_estimators=300), "GradientBoostingClassifier(n_estimators=300)"],
-			#[RandomForestClassifier(n_estimators=300), "RandomForestClassifier(n_estimators=300)"],
-			#[LogisticRegression(), "LogisticRegression"], # coef_
-			#[PassiveAggressiveClassifier(), "PassiveAggressiveClassifier"], # coef_
-			#[RidgeClassifier(), "RidgeClassifier"], # coef_
-			#[SGDClassifier(), "SGDClassifier"], # coef_
-			#[SVC(kernel='linear'), "SVC(linear)"], # coef_, but only if the kernel is linear...the default is 'rbf', which is NOT linear
+			#[RandomForestClassifier(), "RandomForestClassifier()"],
+			[BaggingClassifier(n_estimators=300), "BaggingClassifier(n_estimators=300)"],
+			[GradientBoostingClassifier(n_estimators=300), "GradientBoostingClassifier(n_estimators=300)"],
+			[RandomForestClassifier(n_estimators=300), "RandomForestClassifier(n_estimators=300)"],
+			[LogisticRegression(), "LogisticRegression"], # coef_
+			[PassiveAggressiveClassifier(), "PassiveAggressiveClassifier"], # coef_
+			[RidgeClassifier(), "RidgeClassifier"], # coef_
+			[SGDClassifier(), "SGDClassifier"], # coef_
+			[SVC(kernel='linear'), "SVC(linear)"], # coef_, but only if the kernel is linear...the default is 'rbf', which is NOT linear
 
 			]
 	
